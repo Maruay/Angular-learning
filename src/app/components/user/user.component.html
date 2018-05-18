@@ -1,0 +1,12 @@
+<h1>Angular Workshop</h1>
+
+<ul>
+  <li><b>Name :</b> {{name}}</li>
+  <li><b>Age :</b> {{age}}</li>
+  <li><b>Email :</b> {{email}}</li>
+  <li><b>Address :</b> {{address.street}},  {{address.city}}, {{address.province}} {{address.postcode}}</li>
+</ul>
+
+<ul>
+  <li style="list-style-type: none;" *ngFor="let skill of skills; let i = index">{{i+1}} : {{skill}}</li>
+</ul>
