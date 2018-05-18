@@ -38,4 +38,17 @@ export class UserComponent implements OnInit {
     this.skills = ["Programming", "Database", "Language"];
   }
 
+  addSkill(skill){
+    this.skills.unshift(skill);
+    return false;
+  }
+
+  removeSkill(skill){
+    this.skills.forEach((element, index) => {
+      if (element == skill){
+        this.skills.splice(index, 1);
+      }
+    });
+  }
+
 }
