@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../../services/todo.service'
 
 @Component({
   selector: 'app-user',
@@ -19,9 +20,13 @@ export class UserComponent implements OnInit {
     postcode:string
   }
 
+  private todoList:Todo[];
+
   private skills:string[];
 
-  constructor() { }
+  constructor(private todoService:TodoService) {
+
+   }
 
   ngOnInit() {
     this.name = "Maruay";
@@ -34,8 +39,13 @@ export class UserComponent implements OnInit {
       province: "Bangkok",
       postcode: "10400"
     }
-
+ 
     this.skills = ["Programming", "Database", "Language"];
+
+    // Call service
+    this.todoService.getTodoList().subscribe((response) => {
+        this.todoList = response;
+    });
   }
 
   addSkill(skill){
@@ -51,4 +61,11 @@ export class UserComponent implements OnInit {
     });
   }
 
+}
+
+interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
 }
