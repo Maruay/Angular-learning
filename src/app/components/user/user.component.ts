@@ -21,7 +21,7 @@ export class UserComponent implements OnInit {
   }
 
   private todoList:Todo[];
-
+  private isEditable:boolean = true;
   private skills:string[];
 
   constructor(private todoService:TodoService) {
@@ -51,6 +51,10 @@ export class UserComponent implements OnInit {
   addSkill(skill){
     this.skills.unshift(skill);
     return false;
+  }
+
+  toggleEdit(){
+    this.isEditable =! this.isEditable;
   }
 
   removeSkill(skill){

@@ -7,7 +7,12 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { FormsModule } from '@angular/forms'
 import { TodoService } from './services/todo.service'
 import { HttpModule } from '@angular/http'
+import { RouterModule, Routes } from '@angular/router'
 
+const appRoutes:Routes = [
+{path:"", component:UserComponent},
+{path:"about", component:AboutusComponent}
+]
 
 @NgModule({
   declarations: [
@@ -18,7 +23,8 @@ import { HttpModule } from '@angular/http'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
