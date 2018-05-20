@@ -32,3 +32,5 @@ ng g service --spec=false services/name</pre></code>
 
 
 CR : https://www.youtube.com/watch?v=gx8-xuqgRh8
+https://jsonplaceholder.typicode.com/
+http://json2ts.com/
