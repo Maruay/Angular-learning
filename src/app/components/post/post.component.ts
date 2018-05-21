@@ -9,7 +9,7 @@ import { PostService } from '../../services/post.service';
 export class PostComponent implements OnInit {
 
   private postList:post[];
-
+  private itemSelected:string;
   constructor(private postService:PostService) { }
 
   ngOnInit() {
@@ -17,9 +17,11 @@ export class PostComponent implements OnInit {
     this.postService.getPostList().subscribe((response)=>{
       this.postList = response;
     });
-  }
-
+  } 
   
+  selectItem(item){
+    this.itemSelected = item;
+  }
 }
 
 interface post {
