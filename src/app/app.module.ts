@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
@@ -10,9 +10,11 @@ import { HttpModule } from '@angular/http'
 import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './components/post/post.component';
 import { PostService } from './services/post.service';
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes:Routes = [
-{path:"", component:UserComponent},
+{path:"", component:HomeComponent},
+{path:"user",component:UserComponent},
 {path:"about", component:AboutusComponent},
 {path:"post", component:PostComponent}
 ]
@@ -22,12 +24,14 @@ const appRoutes:Routes = [
     AppComponent,
     UserComponent,
     AboutusComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

@@ -28,7 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <code><pre>ng serve
 ng g component --spec=false components/name
-ng g service --spec=false services/name</pre></code>
+ng g service --spec=false services/name
+npm install @angular/animation@latest --save</pre></code>
 
 
 CR : https://www.youtube.com/watch?v=gx8-xuqgRh8
