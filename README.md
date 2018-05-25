@@ -35,3 +35,4 @@ npm install @angular/animation@latest --save</pre></code>
 CR : https://www.youtube.com/watch?v=gx8-xuqgRh8
 https://jsonplaceholder.typicode.com/
 http://json2ts.com/
+https://www.youtube.com/watch?v=oa9cnWTpqP8

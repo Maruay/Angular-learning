@@ -11,12 +11,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './components/post/post.component';
 import { PostService } from './services/post.service';
 import { HomeComponent } from './components/home/home.component';
+import { EventsComponent } from './components/events/events.component';
 
 const appRoutes:Routes = [
 {path:"", component:HomeComponent},
 {path:"user",component:UserComponent},
 {path:"about", component:AboutusComponent},
-{path:"post", component:PostComponent}
+{path:"post", component:PostComponent},
+{path:"events", component:EventsComponent}
 ]
 
 @NgModule({
@@ -25,7 +27,8 @@ const appRoutes:Routes = [
     UserComponent,
     AboutusComponent,
     PostComponent,
-    HomeComponent
+    HomeComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
