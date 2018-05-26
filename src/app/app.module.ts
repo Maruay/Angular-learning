@@ -12,13 +12,16 @@ import { PostComponent } from './components/post/post.component';
 import { PostService } from './services/post.service';
 import { HomeComponent } from './components/home/home.component';
 import { EventsComponent } from './components/events/events.component';
+import { EmployeeComponent } from './components/employee/employee.component';
+import { EmployeeService } from './services/employee.service';
 
 const appRoutes:Routes = [
 {path:"", component:HomeComponent},
 {path:"user",component:UserComponent},
 {path:"about", component:AboutusComponent},
 {path:"post", component:PostComponent},
-{path:"events", component:EventsComponent}
+{path:"events", component:EventsComponent},
+{path:"employees",component:EmployeeComponent}
 ]
 
 @NgModule({
@@ -28,7 +31,8 @@ const appRoutes:Routes = [
     AboutusComponent,
     PostComponent,
     HomeComponent,
-    EventsComponent
+    EventsComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ const appRoutes:Routes = [
   ],
   providers: [
     TodoService,
-    PostService
+    PostService,
+    EmployeeService
   ],
   bootstrap: [AppComponent]
 })
