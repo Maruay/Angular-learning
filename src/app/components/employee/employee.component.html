@@ -1,6 +1,7 @@
-<table>
+<table style="border:solid white 1px;">
   <div *ngFor="let emp of employee">
   <tr>
+    <td rowspan="7"><img src="{{emp.photoPath}}" style="width:200px;"></td>
     <td>ID : </td>
     <td>{{emp.id}}</td>
   </tr>
@@ -22,7 +23,7 @@
   </tr>
   <tr>
     <td>Birthday : </td>
-    <td>{{emp.dateOfBirth}}</td>
+    <td>{{emp.dateOfBirth | date:'dd/MM/yyyy'}}</td>
   </tr>
   <tr>
     <td>Department : </td>
