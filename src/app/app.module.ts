@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { EventsComponent } from './components/events/events.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeService } from './services/employee.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes = [
 {path:"", component:HomeComponent},
@@ -39,6 +40,7 @@ const appRoutes:Routes = [
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

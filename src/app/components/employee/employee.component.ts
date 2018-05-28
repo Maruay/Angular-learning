@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../../services/employee.service';
+import { Employee } from '../../models/employee'
 
 @Component({
   selector: 'app-employee',
@@ -15,16 +16,4 @@ export class EmployeeComponent implements OnInit {
     this.employee = this.EmployeeService.getEmployee();
   }
 
-}
-
-class Employee {
-  id:number;
-  name:string;
-  gender:string;
-  contactPreference:string;
-  email:string;
-  dateOfBirth:Date;
-  department:string;
-  isActive:boolean;
-  photoPath:string;
 }

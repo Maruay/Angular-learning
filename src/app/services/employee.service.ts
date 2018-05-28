@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Employee } from '../models/employee'
 
 @Injectable({
   providedIn: 'root'
@@ -31,17 +32,4 @@ export class EmployeeService {
   getEmployee(): Employee[] {
     return this.listEmployees;
   }
-}
-
-
-class Employee {
-  id: number;
-  name: string;
-  gender: string;
-  contactPreference: string;
-  email: string;
-  dateOfBirth: Date;
-  department: string;
-  isActive: boolean;
-  photoPath: string;
 }
