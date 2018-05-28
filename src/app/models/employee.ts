@@ -21,9 +21,3 @@ export interface ApiEmp{
     last_name:string;
     avatar:string;
 }
-
-export interface UserResponse {
-    login: string;
-    bio: string;
-    company: string;
-  }

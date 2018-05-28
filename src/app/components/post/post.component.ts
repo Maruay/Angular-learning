@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
-import { ApiEmployee, UserResponse } from '../../models/employee'
+import { ApiEmployee } from '../../models/employee'
 
 @Component({
   selector: 'app-post',
@@ -11,7 +11,7 @@ export class PostComponent implements OnInit {
 
   private postList:post[];
   private itemSelected:string;
-  private apiPostList:UserResponse;
+  private apiPostList:ApiEmployee;
   private test:string;
 
   constructor(private postService:PostService) { }
@@ -22,8 +22,13 @@ export class PostComponent implements OnInit {
       this.postList = response;
     });
 
+    this.postService.getPostList2().subscribe((response)=>{
+      this.apiPostList = response;
+    })
     //this.apiPostList = this.postService.getPostList2();
-    this.postService.getPostList2();
+    //this.postService.getPostList2();
+
+
   } 
   
   selectItem(item){
