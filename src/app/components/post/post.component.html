@@ -1,11 +1,16 @@
 <div style="width:50%;float:left;">
-<ul>
-  <li style="list-style-type: none;" *ngFor="let post of postList"><b>{{post.userId}} :</b> {{post.title}}</li>
-</ul>
-</div>
+  <ul>
+    <li style="list-style-type: none;" *ngFor="let post of postList"><b>{{post.userId}} :</b> {{post.title}}</li>
+  </ul>
+  </div>
 
 <div style="width:50%;float:left;">
   <ul>
     <li style="list-style-type:none;" *ngFor="let emp of apiPostList.data"><img src="{{emp.avatar}}" />&nbsp;&nbsp;&nbsp;<b>{{emp.id + " : " + emp.first_name + " " + emp.last_name}}</b></li>
   </ul>
 </div>
+
+
+{{forName}}<br />
+{{foreachName}}<br />
+{{forOfName}}

@@ -36,3 +36,4 @@ CR : https://www.youtube.com/watch?v=gx8-xuqgRh8
 https://jsonplaceholder.typicode.com/
 http://json2ts.com/
 https://www.youtube.com/watch?v=oa9cnWTpqP8
+https://angular.io/api/http/RequestOptions

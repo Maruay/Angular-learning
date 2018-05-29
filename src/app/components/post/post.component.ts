@@ -13,6 +13,9 @@ export class PostComponent implements OnInit {
   private itemSelected:string;
   private apiPostList:ApiEmployee;
   private test:string;
+  private forName:string = "";
+  private foreachName:string = "";
+  private forOfName:string = "";
 
   constructor(private postService:PostService) { }
 
@@ -24,6 +27,17 @@ export class PostComponent implements OnInit {
 
     this.postService.getPostList2().subscribe((response)=>{
       this.apiPostList = response;
+      for(let i = 0; i<= response.data.length-1;i++){
+        this.forName += response.data[i].first_name + " ";
+      }
+
+      response.data.forEach(x => {
+        this.foreachName += x.first_name + " " + x.last_name + " ";
+      });
+
+      for (var value of response.data){
+        this.forOfName +=  value.first_name + " " + value.last_name + " ";
+      }
     })
     //this.apiPostList = this.postService.getPostList2();
     //this.postService.getPostList2();
